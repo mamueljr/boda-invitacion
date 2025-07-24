@@ -652,3 +652,27 @@ body.preloader-site {
   text-align: center;
   padding: 10px;
 }
+
+/* Sección "¿En dónde será?" */
+.section-location {
+  background-color: #f6f6f6;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.section-location h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #996e6d;
+}
+.section-location p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+.section-location iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  border: none;
+  border-radius: 12px;
+}
