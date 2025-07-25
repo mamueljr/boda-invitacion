@@ -187,13 +187,18 @@ html {
 
 .main-content .section-dark.foto-foto .foto-item {
   margin-bottom: 1rem;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
   border-radius: 5px;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.main-content .section-dark.foto-foto .foto-item:hover {
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 10px 30px rgba(14, 25, 80, 0.4);
+}
+
 
 .main-content .section-dark.my-work .work-item:hover {
   -webkit-transform: scale(1.055) translateY(-2px);
@@ -565,7 +570,7 @@ body.preloader-site {
 
 
 .foto1 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-kang-emil.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/lu_emm1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -574,7 +579,7 @@ body.preloader-site {
 
 
 .foto2 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-cashbac.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/lu_emm2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -582,7 +587,7 @@ body.preloader-site {
 }
 
 .foto3 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-selfie.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/lu_emm3.jpg");
   background-size: cover;
   background-position: top;
   background-repeat:no-repeat;

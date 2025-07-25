@@ -21,16 +21,19 @@
     />
     <link rel="stylesheet" type="text/css" href="css/menikah.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!--
     <script
       src="https://kit.fontawesome.com/2828f7885a.js"
       crossorigin="anonymous"
-    ></script>
+    ></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/jquery.coundown.js"></script>
     <link rel="icon" type="image/png" href="image/favicon.png" />
   </head>
   <body>
-<button id="playMusic" style="
+<button id="playMusic" title="Dale clic para escuchar nuestra canción" style="
   position: fixed;
   top: 20px;
   right: 20px;
@@ -41,9 +44,13 @@
   height: 50px;
   font-size: 24px;
   cursor: pointer;
-  z-index: 999;">
-  🎵
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;">
+  <i id="musicIcon" class="fas fa-play" style="color: #996E6D"></i>
 </button>
+
 
 <audio id="bgMusic" loop>
   <source src="audio/cancion.mp3" type="audio/mpeg">
@@ -113,6 +120,21 @@
         <div class="nama-lengkap">Emmanuel</div>
         <div class="space40px"></div>
       </section>
+
+
+      <section class="section-dark foto-foto">
+  <div class="container">
+    <h2 class="title section-title has-text-centered">Nuestros Momentos</h2>
+    <div class="columns is-multiline">
+      <div class="column is-4 foto-item foto1"></div>
+      <div class="column is-4 foto-item foto2"></div>
+      <div class="column is-4 foto-item foto3"></div>
+    </div>
+  </div>
+</section>
+
+
+
       <section class="section-location">
         <div class="container">
           <h2>¿En dónde será?</h2>
@@ -185,12 +207,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/menikah.js"></script>
   </body>
-  <script>
-  document.getElementById('playMusic').addEventListener('click', function () {
-    var audio = document.getElementById('bgMusic');
-    audio.play();
+ <script>
+  const musicBtn = document.getElementById('playMusic');
+  const musicIcon = document.getElementById('musicIcon');
+  const audio = document.getElementById('bgMusic');
+
+  let isPlaying = false;
+
+  musicBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      musicIcon.classList.remove('fa-pause');
+      musicIcon.classList.add('fa-play');
+      musicBtn.title = "Dale clic para escuchar nuestra canción";
+    } else {
+      audio.play();
+      musicIcon.classList.remove('fa-play');
+      musicIcon.classList.add('fa-pause');
+      musicBtn.title = "Pausar música";
+    }
+    isPlaying = !isPlaying;
   });
 </script>
+
 </body>
 
   
